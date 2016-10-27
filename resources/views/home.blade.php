@@ -1,35 +1,17 @@
-@extends('master')
-
+@extends('layouts.app')
 
 @section('content')
-        
-   
-        <div class="container">
-            <div class="content">
-            <style>
-                html, body {
-                    height: 100%;
-                }
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Dashboard</div>
 
-                .title  {
-                    margin: 0;
-                    padding: 0;
-                    width: 100%;
-                    display: table;
-                    font-weight: 100;
-                    font-family: 'Lato';
-                }
-
-            
-
-                .title {
-                    font-size: 50px;
-                    font-weight: 2;
-                    font-family: 'Lato';
-                    color : grey;
-                }
-            </style>
-                <div class="title">Welcome Home</div>
+                <div class="panel-body">
+                    You are logged in!
+                </div>
             </div>
         </div>
-    @stop
+    </div>
+</div>
+@endsection

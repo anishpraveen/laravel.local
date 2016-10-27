@@ -8,7 +8,9 @@
     
     <article>
     <h2>{{$post->postname}}</h2> 
-     &nbsp&nbsp&nbsp{{$post->published_on}}
+     &nbsp&nbsp&nbsp{{$post->published_now}}
+     </br>
+     <a href="{{$post->id}}/edit">Edit</a>
     </article>
 
    

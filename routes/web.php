@@ -21,9 +21,21 @@ Route::get('home',function () {
 Route::get('contact', 'ContactController@contact');
 Route::get('me', 'ContactController@me');
 Route::get('about', 'PagesController@about');
+/*
 Route::get('posts', 'PostsController@all');
 Route::get('posts/create', 'PostsController@create');
 
 Route::get('posts/{id}', 'PostsController@show');
 
 Route::post('posts','PostsController@store');
+*/
+
+Route::resource('posts','PostsController');
+
+/*Route::controllers([
+    'auth'=> 'Auth\LoginController',
+    'password'=> 'Auth\PasswordController',
+]);*/
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

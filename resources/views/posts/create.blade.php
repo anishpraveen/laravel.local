@@ -1,7 +1,4 @@
-@extends('master')
-
-
-@section('content')
+@extends('master') @section('content')
 <h1>
 	Add new post</h1>
 <!--
@@ -22,15 +19,46 @@
 	<div class="row">
 		<div class="col-lg-5">
 			{!! Form::open(['url' => 'posts' ] ) !!}
-			<div class="form-group ">
-				{!! Form::text('inputPost', null, ['class' => 'form-control', 'placeholder' => 'Post']) !!}
-			</div>
-            <div class="form-group ">
-				{!! Form::submit('Add post', ['class' => 'btn btn-primary form-control']) !!}
-			</div>
+				@include('posts._form',['submitButton'=>'Add Post','inputPostText'=>''])
 			{!! Form::close() !!}
 
 		</div>
 	</div>
 </div>
-@stop
+@endsection 
+
+@section('footer')
+
+@include('errors.list')
+
+<!--
+// Sample form
+ 
+      <?php
+         echo Form::open(array('url' => 'foo/bar'));
+            echo Form::text('username','Username');
+            echo '<br/>';
+            
+            echo Form::text('email', 'example@gmail.com');
+            echo '<br/>';
+     
+            echo Form::password('password');
+            echo '<br/>';
+            
+            echo Form::checkbox('name', 'value');
+            echo '<br/>';
+            
+            echo Form::radio('name', 'value');
+            echo '<br/>';
+            
+            echo Form::file('image');
+            echo '<br/>';
+            
+            echo Form::select('size', array('L' => 'Large', 'S' => 'Small'));
+            echo '<br/>';
+            
+            echo Form::submit('Click Me!');
+         echo Form::close();
+      ?>
+   -->
+@endsection
